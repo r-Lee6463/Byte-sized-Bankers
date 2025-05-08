@@ -1,0 +1,68 @@
+/* 1. Brand variables */
+:root {
+    --cbk-green-dark:    #045d38;
+    --cbk-green:         #057d48;
+    --cbk-green-light:   #34a56f;
+    --cbk-accent:        #ffdd57;
+    --cbk-bg:            #f5f7fa;
+    --circle-1:          rgba(5, 125, 72, 0.15);
+    --circle-2:          rgba(34, 153, 84, 0.10);
+  }
+  
+  /* 2. Bootstrap overrides */
+  body {
+    background-color: var(--cbk-bg);
+    position: relative;
+    overflow-x: hidden;
+    padding: 0;
+  }
+  
+  /* Override primary */
+  .btn-primary,
+  .navbar {
+    background-color: var(--cbk-green) !important;
+    border-color: var(--cbk-green) !important;
+  }
+  
+  /* Navbar gradient */
+  .navbar {
+    background: linear-gradient(90deg, var(--cbk-green-dark), var(--cbk-green));
+  }
+  
+  /* Links */
+  .nav-link { color: rgba(255,255,255,0.9) !important; }
+  .nav-link:hover { color: var(--cbk-accent) !important; }
+  
+  /* Cards */
+  .card {
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Titles */
+  .title, h1, h2, h3 {
+    color: var(--cbk-green-dark) !important;
+  }
+  
+  /* 3. Background circles */
+  .circle {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 0;
+  }
+  
+  .circle.circle-1 {
+    width: 400px; height: 400px;
+    background-color: var(--circle-1);
+    top: -150px; left: -150px;
+  }
+  
+  .circle.circle-2 {
+    width: 300px; height: 300px;
+    background-color: var(--circle-2);
+    bottom: -100px; right: -100px;
+  }
+  
